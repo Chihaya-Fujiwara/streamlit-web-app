@@ -8,10 +8,9 @@ st.set_page_config(
     #initial_sidebar_state="expanded",
 )
 
-
 def main():
     st.title('welcome')
-
+    st.header('this is my page')
     with st.sidebar.expander("Select"):
         g = st.selectbox("Tool type", ('Search','Add cif','Linking with VESTA'))
 
