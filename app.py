@@ -12,5 +12,9 @@ st.set_page_config(
 def main():
     st.title('welcome')
 
+    with st.sidebar.expander("Select"):
+        g = st.selectbox("Tool type", ('Search','Add cif','Linking with VESTA'))
+
+
 if __name__ == '__main__':
     main()
