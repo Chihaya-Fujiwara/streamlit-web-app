@@ -12,7 +12,7 @@ def main():
     ccc1,ccc2,ccc3 = st.columns([1,3,1])
     ccc2.image(image1) 
     ccc2.subheader("")
-    st.write('This is an application for quick analysis and visualization of powder XRD data. Read the following documents before using this software.  This software is created by Chihaya Fujiwara (https://researchmap.jp/C_Fujiwara or -----). If you have any questions, please contact this email address ---[at]--.')
+    st.write('This is an application for quick analysis and visualization of powder XRD data. Read the following documents before using this software.  This software is created by name (---- or -----). If you have any questions, please contact this email address ---[at]--.')
     with st.expander('Quick Summary'):
         markdown2 = """        
         * **Exp file** ： You can load a .ras file, which is the experimental X-ray diffraction data from RIGAKU instrument. You can also convert .ras files to .csv files here.
@@ -25,8 +25,11 @@ def main():
         * **Background** : You can perform a various background processes here.
         * **Upload cif file** : CIF files can be optionally added to the database. Just upload the ciffile and press the button database upload..
         """
-
         st.markdown(markdown2)      
+        
+    with st.sidebar.expander("Select"):
+        g = st.selectbox("Tool type", ('Search','Add cif','Linking with VESTA'))
+
 
 def readfigure(cif_path):
     image1 = Image.open('picture.png')
