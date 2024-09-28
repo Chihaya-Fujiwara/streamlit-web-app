@@ -29,6 +29,7 @@ def main():
         
     with st.sidebar.expander("Select"):
         g = st.selectbox("Tool type", ('Search','Add cif','Linking with VESTA'))
+        st.write(g)
 
 
 def readfigure(cif_path):
